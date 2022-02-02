@@ -1,0 +1,77 @@
+// VARIABLES
+// Base Colors
+$primary-color: #72F29F
+$secondary-color: #A56DF2
+$ternary-color: #F2EE55 
+$light-color: #f2f2f2 
+$text-color: #0D0D0D 
+
+// Utils Colors
+$danger-color: #F2A385
+$warning-color: #F2C385
+$info-color: #69F9ED
+$indigo-color: #6B58DB 
+$light-purple: #F464F9 
+$purple-color: #B258DB
+
+$complement-1: #5CDBAD
+$complement-2: #8AFFB3  
+$complement-3: #61F2D7  
+
+
+
+// NAVBAR
+#navbar
+  .main-menu
+    a
+      color: #4b9968
+      &::before
+        background: $indigo-color
+    #navigation .submenu
+      border-radius: .6em
+
+
+// CAROUSEL
+.carousel
+  .carousel-item
+    height: 100vh
+    img
+      width: 100%
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      height: 70%
+      width: 100%
+      bottom: 0
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))  
+
+    .carousel-caption
+      display: grid !important
+      height: 100%
+      width: 70%
+      margin: auto
+      justify-content: center
+      align-content: center
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7)
+      h5
+        color: $primary-color
+        font-size: 2.6rem
+      p
+        color: $light-color
+        text-align: justify
+
+  .btn-explore
+    position: absolute
+    color: $text-color
+    display: grid 
+    margin-top: -18%
+    justify-self: center
+    width: 10%
+    left: 50%
+    transform: translateX(-50%)
+    padding: 1.5em 2em
+    background: $ternary-color
+    &::before
+      background: darken($ternary-color, 25)
+      

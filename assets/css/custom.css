@@ -1,0 +1,59 @@
+#navbar .main-menu a {
+  color: #4b9968;
+}
+#navbar .main-menu a::before {
+  background: #6B58DB;
+}
+#navbar .main-menu #navigation .submenu {
+  border-radius: 0.6em;
+}
+
+.carousel .carousel-item {
+  height: 100vh;
+}
+.carousel .carousel-item img {
+  width: 100%;
+}
+.carousel .carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+}
+.carousel .carousel-item .carousel-caption {
+  display: grid !important;
+  height: 100%;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.carousel .carousel-item .carousel-caption h5 {
+  color: #72F29F;
+  font-size: 2.6rem;
+}
+.carousel .carousel-item .carousel-caption p {
+  color: #f2f2f2;
+  text-align: justify;
+}
+.carousel .btn-explore {
+  position: absolute;
+  color: #0D0D0D;
+  display: grid;
+  margin-top: -18%;
+  justify-self: center;
+  width: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.5em 2em;
+  background: #F2EE55;
+}
+.carousel .btn-explore::before {
+  background: #b9b50e;
+}
+
+/*# sourceMappingURL=custom.css.map */
