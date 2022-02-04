@@ -9,7 +9,7 @@
 }
 
 .carousel .carousel-item {
-  height: 100vh;
+  height: 110vh;
 }
 .carousel .carousel-item img {
   width: 100%;
@@ -44,16 +44,68 @@
   position: absolute;
   color: #0D0D0D;
   display: grid;
-  margin-top: -18%;
+  margin-top: -20%;
   justify-self: center;
   width: 10%;
   left: 50%;
   transform: translateX(-50%);
   padding: 1.5em 2em;
-  background: #F2EE55;
+  background: #f2ee55;
 }
 .carousel .btn-explore::before {
   background: #b9b50e;
+}
+.carousel .carousel-indicators {
+  margin-bottom: 4em;
+}
+
+#wave-1 {
+  margin-top: -12em;
+  position: absolute;
+}
+
+#profile.pricing-card-area {
+  margin-top: 8em !important;
+}
+#profile .section-tittle h2 {
+  font-size: 2.3rem !important;
+}
+#profile .single-card {
+  border-radius: 0.6em;
+  box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2);
+}
+#profile .single-card:hover {
+  box-shadow: 7px 7px 20px -5px rgba(108, 88, 219, 0.356);
+}
+#profile .single-card:hover .card-btn1 {
+  color: #4e5663;
+}
+#profile .single-card .card-btn1 {
+  margin-bottom: 2.5em;
+  border-radius: 0.6em;
+  background-color: #A56DF2;
+  transition: all 0.4s;
+}
+#profile .single-card .card-btn1::before {
+  background-color: #f2ee55;
+}
+#profile .single-card .fa {
+  color: #2b044d;
+}
+#profile .single-card p {
+  text-align: justify;
+}
+#profile .single-card.details .table-responsive {
+  overflow-x: auto;
+}
+#profile .single-card.details .table-responsive .table {
+  min-width: 25em;
+}
+#profile .single-card.details .table-responsive td {
+  padding: 0;
+}
+#profile .single-card.details .table-responsive td:nth-child(1) {
+  width: 12em;
 }
 
 /*# sourceMappingURL=custom.css.map */
