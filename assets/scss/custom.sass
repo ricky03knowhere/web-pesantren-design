@@ -31,7 +31,7 @@ $complement-3: #61F2D7
 
 
 // CAROUSEL
-.carousel
+#carousel.carousel
   .carousel-item
     height: 110vh
     img
@@ -77,10 +77,15 @@ $complement-3: #61F2D7
 
   .carousel-indicators
     margin-bottom: 4em
+    border-radius: 2em !important
+    li.active
+      background: $indigo-color
 
+// WAVE-1
 #wave-1
   margin-top: -12em
   position: absolute
+
 // PROFILE
 #profile
   &.pricing-card-area
@@ -90,7 +95,7 @@ $complement-3: #61F2D7
     font-size: 2.3rem !important
 
   .single-card
-    // margin-top: 1.5em
+    margin-right: 1em
     border-radius: .6em
     box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2) 
     &:hover
@@ -103,7 +108,6 @@ $complement-3: #61F2D7
       border-radius: .6em
       background-color: $secondary-color
       transition: all .4s
-
       &::before
         background-color: $ternary-color
     
@@ -113,11 +117,120 @@ $complement-3: #61F2D7
       text-align: justify
 
     &.details
+      margin-left: 1em
       .table-responsive
         overflow-x: auto
         .table
-          min-width: 25em
+          min-width: 23em
         td
           padding: 0
         td:nth-child(1)
           width:  12em
+
+  .owl-prev, .owl-next
+    position: absolute
+    top: 30%
+    span
+      font-size: 60px
+      color: #787878
+  .owl-prev
+    left: -30px
+  .owl-next
+    right: -30px
+  
+  .owl-theme 
+    height: 50vw
+    .owl-stage-outer
+      height: 100%
+      .owl-stage
+        margin-top: 10%
+        position: absolute
+        display: flex !important
+        align-content: center
+        height: 100%
+    .owl-nav [class*="owl-"]:hover
+      background: transparent
+
+  .item
+    display: grid
+    justify-content: center !important
+    position: relative
+
+    .profile-card
+      border-radius: 100%
+      height: 10em
+      width: 10em
+      // overflow: hidden
+      position: relative
+      margin: auto
+      padding: 0
+      display: flex
+      justify-content: center
+      box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.4)
+      &:hover
+        box-shadow: 3px 3px 20px rgba(108, 88, 219, 0.5) 
+
+      &::before
+        opacity: 0
+        transition: all .4s
+      &:hover::before
+        opacity: 1
+
+      &:hover .img-card::after
+        transform: scale(1.15)
+        filter: brightness(1)
+
+      &:hover .card-btn1
+        color: darken($secondary-text-color, 15)
+        
+      .img-card
+        width: 100%
+        height: 100%
+        border-radius: 100%
+        overflow: hidden
+        position: relative
+        padding: 0
+        // display: flex
+        &::after
+          content: ""
+          display: block
+          position: absolute
+          filter: brightness(.75)
+          width: 100%
+          height: 100%
+          background-image: url(../img/team/unnamed.png)
+          background-position: center
+          background-size: cover
+          transition: all .4s
+      
+      .btn
+        color: #fff
+        bottom: -3.3em
+        position: absolute
+        font-size: .85rem
+        min-width: 15em
+        max-width: 15em
+        padding: 1.5em
+        display: block
+        &::before
+          height: 105%
+
+.tooltip
+  margin: 1em 0 -0.5em
+  margin-left: 12em
+  position: absolute
+  .arrow::before
+    margin-left: 1em
+    // transform: rotate(20deg)
+    border-top-color: $secondary-text-color
+    border-bottom-color: $secondary-text-color
+  .tooltip-inner
+    box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2) 
+    border-radius: 1em
+    font-size: .7rem
+    // padding: 0
+    // color: $text-color
+    background: $secondary-text-color
+        
+    // .profile-card:hover &~.card-btn1
+    //   color: darken($secondary-text-color, 15)

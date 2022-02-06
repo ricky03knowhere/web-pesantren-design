@@ -12,7 +12,10 @@
 
   <!-- CSS here -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <!-- <link rel="stylesheet" href="assets/css/owl.carousel.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/flaticon.css" />
   <link rel="stylesheet" href="assets/css/slicknav.css" />
   <link rel="stylesheet" href="assets/css/animate.min.css" />
@@ -188,7 +191,7 @@
         d="M0,160L48,154.7C96,149,192,139,288,144C384,149,480,171,576,186.7C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
     </svg>
-    <!-- Profile Start -->
+    <!-- PROFILE START -->
     <section class="pricing-card-area" id="profile">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -274,15 +277,76 @@
               </div>
             </div>
           </div>
+
+          <h3 class="mb-30">Daftar Pengajar</h3>
+
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="single-card profile-card" data-toggle="modal" data-target="#modal-1">
+                <div class="img-card"></div>
+                <a class="btn card-btn1">Ust.Mamat Brs S.Ag</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="single-card profile-card" data-toggle="modal" data-target="#modal-1">
+                <div class="img-card"></div>
+                <a class="btn card-btn1">Ust.Ucok</a>
+              </div>
+            </div>
+            <div class="item">
+              <h4>3</h4>
+            </div>
+            <div class="item">
+              <h4>4</h4>
+            </div>
+            <div class="item">
+              <h4>5</h4>
+            </div>
+            <div class="item">
+              <h4>6</h4>
+            </div>
+            <div class="item">
+              <h4>7</h4>
+            </div>
+            <div class="item">
+              <h4>8</h4>
+            </div>
+            <div class="item">
+              <h4>9</h4>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!--PENGAJAR START-->
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--PENGAJAR END-->
+
     </section>
-    <!-- Profile End -->
+    <!-- PROFILE END -->
+
   </main>
-
-  <!-- PROFILE START -->
-
-  <!-- PROFILE END -->
 
   <!-- Footer Start-->
   <footer>
@@ -400,7 +464,8 @@
   <script src="./assets/js/jquery.slicknav.min.js"></script>
 
   <!-- Jquery Slick , Owl-Carousel Plugins -->
-  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- <script src="./assets/js/owl.carousel.min.js"></script> -->
   <script src="./assets/js/slick.min.js"></script>
   <!-- Date Picker -->
   <script src="./assets/js/gijgo.min.js"></script>
@@ -424,6 +489,38 @@
   <!-- Jquery Plugins, main Jquery -->
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script>
+    // Owl Carousel Options
+    $('.owl-carousel').owlCarousel({
+      // autoplay: true,
+      autoplayHoverPause: true,
+      items: 5,
+      loop: true,
+      nav: true,
+      margin: 10,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    })
+
+
+
+    // Owl Carousel Tooltips
+    $(".owl-carousel .item .profile-card").tooltip({
+      title: 'Click for detail',
+      delay: 200,
+      offset: 10,
+      template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    })
+  </script>
 </body>
 
 </html>

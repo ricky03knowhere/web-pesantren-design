@@ -8,13 +8,13 @@
   border-radius: 0.6em;
 }
 
-.carousel .carousel-item {
+#carousel.carousel .carousel-item {
   height: 110vh;
 }
-.carousel .carousel-item img {
+#carousel.carousel .carousel-item img {
   width: 100%;
 }
-.carousel .carousel-item::before {
+#carousel.carousel .carousel-item::before {
   content: "";
   display: block;
   position: absolute;
@@ -23,7 +23,7 @@
   bottom: 0;
   background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
 }
-.carousel .carousel-item .carousel-caption {
+#carousel.carousel .carousel-item .carousel-caption {
   display: grid !important;
   height: 100%;
   width: 70%;
@@ -32,15 +32,15 @@
   align-content: center;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-.carousel .carousel-item .carousel-caption h5 {
+#carousel.carousel .carousel-item .carousel-caption h5 {
   color: #72F29F;
   font-size: 2.6rem;
 }
-.carousel .carousel-item .carousel-caption p {
+#carousel.carousel .carousel-item .carousel-caption p {
   color: #f2f2f2;
   text-align: justify;
 }
-.carousel .btn-explore {
+#carousel.carousel .btn-explore {
   position: absolute;
   color: #0D0D0D;
   display: grid;
@@ -52,11 +52,15 @@
   padding: 1.5em 2em;
   background: #f2ee55;
 }
-.carousel .btn-explore::before {
+#carousel.carousel .btn-explore::before {
   background: #b9b50e;
 }
-.carousel .carousel-indicators {
+#carousel.carousel .carousel-indicators {
   margin-bottom: 4em;
+  border-radius: 2em !important;
+}
+#carousel.carousel .carousel-indicators li.active {
+  background: #6B58DB;
 }
 
 #wave-1 {
@@ -71,6 +75,7 @@
   font-size: 2.3rem !important;
 }
 #profile .single-card {
+  margin-right: 1em;
   border-radius: 0.6em;
   box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2);
 }
@@ -95,17 +100,133 @@
 #profile .single-card p {
   text-align: justify;
 }
+#profile .single-card.details {
+  margin-left: 1em;
+}
 #profile .single-card.details .table-responsive {
   overflow-x: auto;
 }
 #profile .single-card.details .table-responsive .table {
-  min-width: 25em;
+  min-width: 23em;
 }
 #profile .single-card.details .table-responsive td {
   padding: 0;
 }
 #profile .single-card.details .table-responsive td:nth-child(1) {
   width: 12em;
+}
+#profile .owl-prev, #profile .owl-next {
+  position: absolute;
+  top: 30%;
+}
+#profile .owl-prev span, #profile .owl-next span {
+  font-size: 60px;
+  color: #787878;
+}
+#profile .owl-prev {
+  left: -30px;
+}
+#profile .owl-next {
+  right: -30px;
+}
+#profile .owl-theme {
+  height: 50vw;
+}
+#profile .owl-theme .owl-stage-outer {
+  height: 100%;
+}
+#profile .owl-theme .owl-stage-outer .owl-stage {
+  margin-top: 10%;
+  position: absolute;
+  display: flex !important;
+  align-content: center;
+  height: 100%;
+}
+#profile .owl-theme .owl-nav [class*=owl-]:hover {
+  background: transparent;
+}
+#profile .item {
+  display: grid;
+  justify-content: center !important;
+  position: relative;
+}
+#profile .item .profile-card {
+  border-radius: 100%;
+  height: 10em;
+  width: 10em;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.4);
+}
+#profile .item .profile-card:hover {
+  box-shadow: 3px 3px 20px rgba(108, 88, 219, 0.5);
+}
+#profile .item .profile-card::before {
+  opacity: 0;
+  transition: all 0.4s;
+}
+#profile .item .profile-card:hover::before {
+  opacity: 1;
+}
+#profile .item .profile-card:hover .img-card::after {
+  transform: scale(1.15);
+  filter: brightness(1);
+}
+#profile .item .profile-card:hover .card-btn1 {
+  color: #4e5663;
+}
+#profile .item .profile-card .img-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+#profile .item .profile-card .img-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  filter: brightness(0.75);
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/team/unnamed.png);
+  background-position: center;
+  background-size: cover;
+  transition: all 0.4s;
+}
+#profile .item .profile-card .btn {
+  color: #fff;
+  bottom: -3.3em;
+  position: absolute;
+  font-size: 0.85rem;
+  min-width: 15em;
+  max-width: 15em;
+  padding: 1.5em;
+  display: block;
+}
+#profile .item .profile-card .btn::before {
+  height: 105%;
+}
+
+.tooltip {
+  margin: 1em 0 -0.5em;
+  margin-left: 12em;
+  position: absolute;
+}
+.tooltip .arrow::before {
+  margin-left: 1em;
+  border-top-color: #707b8e;
+  border-bottom-color: #707b8e;
+}
+.tooltip .tooltip-inner {
+  box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2);
+  border-radius: 1em;
+  font-size: 0.7rem;
+  background: #707b8e;
 }
 
 /*# sourceMappingURL=custom.css.map */
