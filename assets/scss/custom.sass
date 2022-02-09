@@ -6,6 +6,7 @@ $ternary-color: #f2ee55
 $light-color: #f2f2f2 
 $text-color: #0D0D0D 
 $secondary-text-color: #707b8e
+$icon-color: #2b044d
 
 // Utils Colors
 $danger-color: #F2A385
@@ -21,6 +22,7 @@ $complement-3: #61F2D7
 
 // NAVBAR
 #navbar
+  z-index: 999
   .main-menu
     a
       color: #4b9968
@@ -94,8 +96,19 @@ $complement-3: #61F2D7
   .section-tittle h2
     font-size: 2.3rem !important
 
+  .card-wrapper
+    padding-bottom: 60px
+    &>div:nth-child(1)
+      padding-right: 0
+
+    &>div:nth-child(2)
+      padding-left: 0
+
+  .pengajar-wrapper
+    padding: 60px 39px 0
+    
   .single-card
-    margin-right: 1em
+    margin: 0
     border-radius: .6em
     box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2) 
     &:hover
@@ -112,21 +125,29 @@ $complement-3: #61F2D7
         background-color: $ternary-color
     
     .fa
-      color: #2b044d
+      color: $icon-color
     p
       text-align: justify
 
     &.details
-      margin-left: 1em
+      margin-left: 0
       .table-responsive
         overflow-x: auto
         .table
           min-width: 23em
         td
           padding: 0
+          // p
+          //   text-align: left
         td:nth-child(1)
           width:  12em
 
+  .sub-title
+    // margin-left: 40px
+    margin-bottom: 2rem
+    font-size: 1.6rem
+    // left: 0
+    // position: absolute
   .owl-prev, .owl-next
     position: absolute
     top: 30%
@@ -139,11 +160,11 @@ $complement-3: #61F2D7
     right: -30px
   
   .owl-theme 
-    height: 50vw
+    height: 15em
     .owl-stage-outer
       height: 100%
       .owl-stage
-        margin-top: 10%
+        margin-top: 2em
         position: absolute
         display: flex !important
         align-content: center
@@ -206,6 +227,7 @@ $complement-3: #61F2D7
       .btn
         color: #fff
         bottom: -3.3em
+        margin-bottom: 2em
         position: absolute
         font-size: .85rem
         min-width: 15em
@@ -215,22 +237,82 @@ $complement-3: #61F2D7
         &::before
           height: 105%
 
+  .modal
+    .modal-dialog
+      width: 55%
+      // margin: 3px
+      @media (max-width: 720px)
+        width: 95.5%
+    .modal-content
+      padding: 0
+      margin: 0
+      &:hover::before
+        display: none
+      &:hover
+        box-shadow: none
+
+    .modal-body
+      padding: 1.5em
+    .row
+      justify-content: center
+      img
+        width: 100%
+        border-radius: .6em
+      .table-responsive
+        overflow-x: auto
+        .table
+          min-width: 23em
+        td
+          padding: 0
+          p
+            text-align: left
+            margin-bottom: 8px
+            .fa
+              font-size: 1.1rem
+
+        .education
+          display: flex
+          ul
+            padding: 0 0 1em 10px
+            position: relative
+            color: $secondary-text-color
+            li
+              list-style: none
+              padding-left: .5em
+              padding-bottom: 5px
+              &::before
+                font-family: "Font Awesome 5 Free"
+                font-weight: 900
+                content: "\f101"
+                position: absolute
+                left: 0
+        a
+          i
+            color: $secondary-text-color
+            font-size: 1.6rem !important
+            margin-right: .5em
+            top: 4px
+            position: relative
+            transition: all .4s
+
+          &:hover i
+            color: $indigo-color
+            
+        td:nth-child(1)
+          width:  10em
+          p
+            color: $secondary-text-color !important
 .tooltip
   margin: 1em 0 -0.5em
   margin-left: 12em
   position: absolute
   .arrow::before
     margin-left: 1em
-    // transform: rotate(20deg)
     border-top-color: $secondary-text-color
     border-bottom-color: $secondary-text-color
   .tooltip-inner
     box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2) 
     border-radius: 1em
     font-size: .7rem
-    // padding: 0
-    // color: $text-color
     background: $secondary-text-color
         
-    // .profile-card:hover &~.card-btn1
-    //   color: darken($secondary-text-color, 15)

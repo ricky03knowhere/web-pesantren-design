@@ -20,7 +20,11 @@
   <link rel="stylesheet" href="assets/css/slicknav.css" />
   <link rel="stylesheet" href="assets/css/animate.min.css" />
   <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <!-- <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/css/themify-icons.css" />
   <link rel="stylesheet" href="assets/css/slick.css" />
   <link rel="stylesheet" href="assets/css/nice-select.css" />
@@ -202,7 +206,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-around card-wrapper">
           <div class="col-md-6">
             <div class="single-card text-center mb-30">
               <div class="card-top">
@@ -233,31 +237,7 @@
                     <tbody>
                       <tr>
                         <td>
-                          <p><i class="fa fa-user mr-3"></i>Tahun Didirikan</p>
-                        </td>
-                        <td>
-                          <p>:&emsp;2010</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><i class="fa fa-user mr-3"></i>Jumlah Santri</p>
-                        </td>
-                        <td>
-                          <p>:&emsp;22</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><i class="fa fa-user mr-3"></i>Jumalah Ustadz</p>
-                        </td>
-                        <td>
-                          <p>:&emsp;78</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p><i class="fa fa-user mr-3"></i>Akreditasi</p>
+                          <p><i class="fa fa-calendar-check mr-3"></i>Akreditasi</p>
                         </td>
                         <td>
                           <p>:&emsp;B</p>
@@ -265,10 +245,34 @@
                       </tr>
                       <tr>
                         <td>
-                          <p><i class="fa fa-user mr-3"></i>Pimpinan</p>
+                          <p><i class="fa fa-landmark mr-3"></i>Tahun Didirikan</p>
+                        </td>
+                        <td>
+                          <p>:&emsp;2010</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-user-tie mr-3"></i>Pimpinan</p>
                         </td>
                         <td>
                           <p>:&emsp;Ust.Asep Abdul G S.pd</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-chalkboard-teacher mr-3"></i>Jumlah Pengajar</p>
+                        </td>
+                        <td>
+                          <p>:&emsp;22</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-users mr-3"></i>Jumalah Santri</p>
+                        </td>
+                        <td>
+                          <p>:&emsp;780</p>
                         </td>
                       </tr>
                     </tbody>
@@ -277,8 +281,11 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <h3 class="mb-30">Daftar Pengajar</h3>
+        <!--PENGAJAR START-->
+        <div class="row pengajar-wrapper">
+          <h3 class="sub-title">Daftar Pengajar</h3>
 
           <div class="owl-carousel owl-theme">
             <div class="item">
@@ -316,32 +323,107 @@
             </div>
           </div>
         </div>
+        <!--PENGAJAR END-->
       </div>
 
-      <!--PENGAJAR START-->
-
-      <!-- Modal -->
-      <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
+      <!-- MODAL START -->
+      <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content single-card">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+              <h4 class="modal-title" id="exampleModalCenterTitle">Ust.Mamat Xavier basreng S.Ag</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
-              ...
+              <div class="row">
+                <div class="col-md-4 justify-items-center">
+                  <img src="/assets/img/team/unnamed2.png" alt="profile-img">
+                </div>
+                <div class="col-md-8">
+                  <div class="table-responsive">
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td height="5px">
+                            <p><i class="fa fa-user-tie mr-3"></i>Jabatan</p>
+                          </td>
+                          <td>
+                            <p>:&emsp;Pengurus</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><i class="fa fa-calendar-alt mr-3"></i>Tanggal Lahir</p>
+                          </td>
+                          <td>
+                            <p>:&emsp;26 Juli 2002</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><i class="fa fa-briefcase mr-3"></i>Profesi</p>
+                          </td>
+                          <td>
+                            <p>:&emsp;Mahasiswa</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p><i class="fa fa-map-marked-alt mr-3"></i>Alamat</p>
+                          </td>
+                          <td>
+                            <p>:&emsp;Kp.Ciduga RT 02 RW 09 <br>&emsp;Des.Margahayu 4049 <br>
+                              &emsp;Kec.Leuwigoong Kab.Garut</p>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="table-responsive m-4">
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-graduation-cap mr-3"></i>Edukasi</p>
+                        </td>
+                        <td class="education">
+                          <p>:&emsp;
+                            <ul>
+                              <li>SMK Al-ghifari Banyuresmi (RPL) : 2017 ~ 2020</li>
+                              <li>UIN Sunan Gunung Djati Bandung (Teknik Informatika) : 2020 ~ 2024</li>
+                            </ul>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-globe mr-3"></i>Media Sosial</p>
+                        </td>
+                        <td>
+                          <p>:&emsp;
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fa fa-envelope"></i></a>
+                            <a href=""><i class="fab fa-facebook-square"></i></a>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
             </div>
           </div>
         </div>
       </div>
-      <!--PENGAJAR END-->
+      <!-- MODAL END -->
 
     </section>
     <!-- PROFILE END -->
@@ -506,7 +588,7 @@
           items: 3
         },
         1000: {
-          items: 5
+          items: 4
         }
       }
     })
@@ -520,6 +602,8 @@
       offset: 10,
       template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     })
+
+    // $('#modal-1').modal('show')
   </script>
 </body>
 
