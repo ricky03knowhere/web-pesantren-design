@@ -4,7 +4,7 @@
   color: #4e5663;
 }
 #scrollUp:hover {
-  color: #0D0D0D;
+  color: #212529;
 }
 
 #navbar {
@@ -54,7 +54,7 @@
 }
 #carousel.carousel .btn-explore {
   position: absolute;
-  color: #0D0D0D;
+  color: #212529;
   display: grid;
   margin-top: -20%;
   justify-self: center;

@@ -1,0 +1,212 @@
+#kurikulum {
+  margin-top: 14em;
+}
+#kurikulum .sub-title {
+  margin-bottom: 2rem;
+}
+#kurikulum .kegiatan {
+  margin-bottom: 120px;
+}
+#kurikulum .kegiatan .accordion {
+  box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2);
+  border-radius: 0.6em;
+  transition: all 0.4s;
+}
+#kurikulum .kegiatan .accordion:hover {
+  box-shadow: 7px 7px 20px -5px rgba(108, 88, 219, 0.356);
+}
+#kurikulum .kegiatan .accordion .card {
+  border: none;
+  overflow: hidden;
+}
+#kurikulum .kegiatan .accordion .card:nth-child(1) {
+  border-radius: 0.6em 0.6em 0 0;
+}
+#kurikulum .kegiatan .accordion .card:nth-child(3) {
+  border-radius: 0 0 0.6em 0.6em;
+}
+#kurikulum .kegiatan .accordion .card-header {
+  position: relative;
+}
+#kurikulum .kegiatan .accordion .card-header:hover .btn {
+  z-index: 0;
+  color: #4e5663;
+}
+#kurikulum .kegiatan .accordion .card-header:hover .btn::before {
+  transform: scaleX(100%);
+  z-index: -1;
+}
+#kurikulum .kegiatan .accordion .card-header .angle.collapsed i {
+  transform: rotate(0);
+}
+#kurikulum .kegiatan .accordion .progress-table-wrap {
+  overflow: auto;
+}
+#kurikulum .kegiatan .accordion .unordered-list {
+  padding-left: 2em;
+  background: #f9f9ff;
+}
+#kurikulum .kegiatan .btn {
+  border-radius: 0.6em;
+  background-color: #A56DF2;
+  transition: all 0.4s;
+  text-transform: uppercase;
+  color: #fff;
+  min-width: 15em;
+  padding: 30px;
+  display: block;
+}
+#kurikulum .kegiatan .btn::before {
+  background-color: #f2ee55;
+  height: 105%;
+}
+#kurikulum .kegiatan .angle {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-right: 0.5em;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #2b044d;
+}
+#kurikulum .kegiatan .angle i {
+  transform: rotate(-90deg);
+  transition: all 0.4s;
+}
+
+.kitab-wrapper .owl-prev, .kitab-wrapper .owl-next {
+  position: absolute;
+  top: 30%;
+  margin: 5px;
+}
+.kitab-wrapper .owl-prev span, .kitab-wrapper .owl-next span {
+  font-size: 60px;
+  color: #787878;
+}
+.kitab-wrapper .owl-prev {
+  left: -45px;
+}
+.kitab-wrapper .owl-next {
+  right: -45px;
+}
+.kitab-wrapper .owl-theme {
+  height: 21em;
+  margin-bottom: 2em;
+}
+.kitab-wrapper .owl-theme .owl-stage-outer {
+  height: 100%;
+}
+.kitab-wrapper .owl-theme .owl-stage-outer .owl-stage {
+  margin-top: 2em;
+  position: absolute;
+  display: flex !important;
+  align-content: center;
+  height: 100%;
+}
+.kitab-wrapper .owl-theme .owl-nav [class*=owl-]:hover {
+  background: transparent;
+}
+.kitab-wrapper .item {
+  display: grid;
+  justify-content: center !important;
+  position: relative;
+}
+.kitab-wrapper .card {
+  border: none;
+  border-radius: 0.6em;
+  overflow: hidden;
+  width: 95%;
+  box-shadow: 0 0 10px 1px rgba(108, 88, 219, 0.7);
+  transition: all 0.4s;
+}
+.kitab-wrapper .card:hover {
+  box-shadow: 3px 3px 23px rgba(108, 88, 219, 0.8);
+}
+@media (max-width: 720px) {
+  .kitab-wrapper .card {
+    width: 100%;
+  }
+}
+.kitab-wrapper .card-img-overlay {
+  padding: 100% 0 0 0.5em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, black 84%);
+}
+.kitab-wrapper .card-img-overlay .title, .kitab-wrapper .card-img-overlay .author {
+  text-shadow: 1px 1px 3px #000;
+  position: absolute;
+}
+.kitab-wrapper .card-img-overlay .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  bottom: 1.6em;
+  color: #f2f2f2;
+}
+.kitab-wrapper .card-img-overlay .author {
+  color: #72F29F;
+  font-size: 0.7rem;
+  bottom: 1.5em;
+}
+
+@media (max-width: 720px) {
+  .modal .modal-dialog {
+    width: 95.5%;
+  }
+}
+.modal .modal-content {
+  padding: 0;
+  margin: 0;
+  border-radius: 0.6em;
+}
+.modal .modal-content:hover::before {
+  display: none;
+}
+.modal .modal-content:hover {
+  box-shadow: none;
+}
+.modal .modal-body {
+  padding: 1.5em;
+}
+.modal .modal-body .row {
+  justify-content: center;
+}
+.modal .modal-body .row > div:first-child {
+  margin-bottom: 2em;
+}
+.modal .modal-body .row .img-wrapper {
+  height: 100%;
+  border-radius: 0.6em;
+  overflow: hidden;
+}
+.modal .modal-body .row .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.modal .modal-body .row .table-responsive {
+  overflow-x: auto;
+}
+.modal .modal-body .row .table-responsive .table {
+  min-width: 23em;
+}
+.modal .modal-body .row .table-responsive td {
+  padding: 0;
+}
+.modal .modal-body .row .table-responsive td p {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.modal .modal-body .row .table-responsive td p .fa {
+  font-size: 1.1rem;
+  color: #2b044d;
+}
+.modal .modal-body .row .table-responsive td .desc {
+  text-align: justify !important;
+}
+.modal .modal-body .row .table-responsive td:nth-child(1) {
+  width: 8em;
+}
+
+/*# sourceMappingURL=kurikulum.css.map */
