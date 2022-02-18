@@ -10,6 +10,10 @@
 #navbar {
   z-index: 999;
 }
+#navbar .slicknav_icon-bar {
+  background: #6B58DB !important;
+  border-radius: 1em;
+}
 #navbar .main-menu a {
   color: #4b9968;
 }
@@ -25,6 +29,8 @@
 }
 #carousel.carousel .carousel-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #carousel.carousel .carousel-item::before {
   content: "";
@@ -49,6 +55,7 @@
   font-size: 2.6rem;
 }
 #carousel.carousel .carousel-item .carousel-caption p {
+  margin-top: 1em;
   color: #f2f2f2;
   text-align: justify;
 }
@@ -74,10 +81,41 @@
 #carousel.carousel .carousel-indicators li.active {
   background: #6B58DB;
 }
+@media (max-width: 720px) {
+  #carousel.carousel .carousel-item {
+    height: 90vh;
+  }
+  #carousel.carousel .carousel-item .carousel-caption {
+    top: -4em;
+    width: 80%;
+    left: 2em;
+  }
+  #carousel.carousel .carousel-item .carousel-caption h5 {
+    text-align: left;
+  }
+  #carousel.carousel .carousel-item .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  #carousel.carousel .btn-explore {
+    margin-top: -50%;
+    width: 50%;
+  }
+  #carousel.carousel .carousel-indicators {
+    display: none;
+  }
+  #carousel.carousel .ctrl {
+    display: none;
+  }
+}
 
 #wave-1 {
   margin-top: -12em;
   position: absolute;
+}
+@media (max-width: 720px) {
+  #wave-1 {
+    margin-top: -4.9em;
+  }
 }
 
 #profile.pricing-card-area {

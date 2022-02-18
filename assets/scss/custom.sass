@@ -37,6 +37,9 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
 // NAVBAR
 #navbar
   z-index: 999
+  .slicknav_icon-bar
+    background: $indigo-color !important
+    border-radius: 1em
   .main-menu
     a
       color: #4b9968
@@ -52,6 +55,8 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
     height: 110vh
     img
       width: 100%
+      height: 100%
+      object-fit: cover
     &::before
       content: ''
       display: block
@@ -73,6 +78,7 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
         color: $primary-color
         font-size: 2.6rem
       p
+        margin-top: 1em
         color: $light-color
         text-align: justify
     
@@ -97,10 +103,37 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
     li.active
       background: $indigo-color
 
+  // Mobile version
+  @media (max-width: 720px)
+    .carousel-item
+      height: 90vh
+      .carousel-caption
+        top: -4em
+        width: 80%
+        left: 2em
+        h5
+          text-align: left
+        p
+          font-size: .9rem
+
+    .btn-explore
+      margin-top: -50%
+      width: 50%
+    .carousel-indicators
+      display: none
+    .ctrl
+      display: none
+    
+
+
+
 // WAVE-1
 #wave-1
   margin-top: -12em
   position: absolute
+  // Mobile version
+  @media (max-width: 720px)
+    margin-top: -4.9em
 
 // PROFILE
 #profile
