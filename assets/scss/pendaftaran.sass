@@ -40,14 +40,28 @@ $primary-font: "Nunito"
       border-radius: .6em
       .list-group-item
         background: #f9f9ff
+        padding-left: 46px
 
       &:hover
         box-shadow: 7px 7px 20px -5px rgba(108, 88, 219, 0.356) 
-  
+      
+      // Mobile version
+      @media (max-width: 720px)
+        padding: 1em .5em
+
+  .persyaratan-wrapper
+    text-align: justify
+    .fas
+      top: 1em
+      left: 1em
+      position: absolute
+    
   .alur-wrapper .card
+    text-align: justify
     .list-group-item .number
       color: $indigo-color
-      margin-right: 0.5em
+      left: 3px
+      position: absolute
     
     a
       color: $indigo-color
@@ -67,5 +81,9 @@ $primary-font: "Nunito"
         margin-bottom: 60px
         
     .progress-table-wrap
-        overflow: auto
-        border-radius: .6em
+      overflow: auto
+      border-radius: .6em
+      
+      .table-row
+        .percentage
+          width: 80%

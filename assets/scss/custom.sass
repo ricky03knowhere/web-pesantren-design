@@ -151,6 +151,18 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
     &>div:nth-child(2)
       padding-left: 0
 
+  // Mobile version
+  @media (max-width: 720px)
+    .card-wrapper
+      &>div:nth-child(1)
+        padding-right: 15px
+        margin-bottom: 3em
+
+      &>div:nth-child(2)
+        padding-left: 15px
+
+
+  // PENGAJAR 
   .pengajar-wrapper
     padding: 60px 39px 0
     
@@ -350,6 +362,18 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
           width:  10em
           p
             color: $secondary-text-color !important
+    
+    // Mobile version
+    @media (max-width: 720px)
+      .modal-body 
+        img
+          height: 100%
+          object-fit: cover
+        .col-md-4
+          height: 18em
+          margin-bottom: 2em
+
+            
 .tooltip
   margin: 1em 0 -0.5em
   margin-left: 12em
@@ -364,6 +388,9 @@ $sosmeds: (facebook-square: #0480fe,instagram: #ee258e, whatsapp: #11d458, envel
     font-size: .7rem
     background: $secondary-text-color
 
+// WAVE-2
+#wave-2
+  margin-top: 6em
 // FOOTER
 #footer
   background: $secondary-color

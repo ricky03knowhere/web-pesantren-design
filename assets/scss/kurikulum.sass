@@ -92,7 +92,11 @@ $primary-font: "Nunito"
       i
         transform: rotate(-90deg)
         transition: all .4s
-      
+
+  // Mobile version
+  @media (max-width: 720px) 
+    .kegiatan .btn
+      min-width: 13em
 
 // KITAB
 .kitab-wrapper
@@ -100,7 +104,7 @@ $primary-font: "Nunito"
   .owl-prev, .owl-next
     position: absolute
     top: 30%
-    margin: 5px
+    // margin: 5px
     span
       font-size: 60px
       color: #787878
@@ -164,6 +168,14 @@ $primary-font: "Nunito"
       font-size: .7rem
       bottom: 1.5em
 
+
+  // Mobile version
+  @media (max-width: 720px)
+    .owl-prev
+      left: 0
+    .owl-next
+      right: 0
+
 .modal
   .modal-dialog
     // width: 55%
@@ -192,6 +204,8 @@ $primary-font: "Nunito"
         img
           width: 100%
           height: 100%
+          object-fit: cover
+
       .table-responsive
         overflow-x: auto
         .table
@@ -210,10 +224,20 @@ $primary-font: "Nunito"
         td:nth-child(1)
           width:  8em
 
+  // Mobile version
+  @media (max-width: 720px)
+    .modal-body .row
+      >div:first-child
+        margin-bottom: 2em
+        overflow: hidden
+        height: 18em
+      .img-wrapper
+        // height: 50%
+
 // EKSTRAKULIKULER
 .kulikuler-wrapper
-  .col-md-7
-    padding-left: 0
+  .col-md-5
+    padding-right: 0
   .card
     border-radius: .6em
     overflow: hidden
@@ -225,10 +249,12 @@ $primary-font: "Nunito"
       border: 1px solid $secondary-color
 
     .card-img
+      height: 100%
       border-radius: 0
       border: none
+      object-fit: cover
     .card-title
-      padding-top: 15px
+      padding-top: 1em
       font-size: 1.4rem
       margin-bottom: 1em
     .card-text
@@ -236,3 +262,16 @@ $primary-font: "Nunito"
       font-size: .9rem
       text-align: justify
       line-height: 1.5rem
+
+  // Mobile version
+  @media (max-width: 720px)
+    .col-md-7
+      padding: 2em
+    .col-md-5
+      overflow: hidden
+      height: 12em
+    .card
+      .card-title
+        padding-top: 0
+      .card-text
+        padding-right: 0

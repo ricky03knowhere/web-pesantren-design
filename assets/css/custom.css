@@ -133,6 +133,15 @@
 #profile .card-wrapper > div:nth-child(2) {
   padding-left: 0;
 }
+@media (max-width: 720px) {
+  #profile .card-wrapper > div:nth-child(1) {
+    padding-right: 15px;
+    margin-bottom: 3em;
+  }
+  #profile .card-wrapper > div:nth-child(2) {
+    padding-left: 15px;
+  }
+}
 #profile .pengajar-wrapper {
   padding: 60px 39px 0;
 }
@@ -360,6 +369,16 @@
 #profile .modal .row .table-responsive td:nth-child(1) p {
   color: #707b8e !important;
 }
+@media (max-width: 720px) {
+  #profile .modal .modal-body img {
+    height: 100%;
+    object-fit: cover;
+  }
+  #profile .modal .modal-body .col-md-4 {
+    height: 18em;
+    margin-bottom: 2em;
+  }
+}
 
 .tooltip {
   margin: 1em 0 -0.5em;
@@ -376,6 +395,10 @@
   border-radius: 1em;
   font-size: 0.7rem;
   background: #707b8e;
+}
+
+#wave-2 {
+  margin-top: 6em;
 }
 
 #footer {

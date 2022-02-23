@@ -17,13 +17,31 @@
 }
 #pendaftaran .persyaratan-wrapper .card .list-group-item, #pendaftaran .alur-wrapper .card .list-group-item, #pendaftaran .biaya-wrapper .card .list-group-item {
   background: #f9f9ff;
+  padding-left: 46px;
 }
 #pendaftaran .persyaratan-wrapper .card:hover, #pendaftaran .alur-wrapper .card:hover, #pendaftaran .biaya-wrapper .card:hover {
   box-shadow: 7px 7px 20px -5px rgba(108, 88, 219, 0.356);
 }
+@media (max-width: 720px) {
+  #pendaftaran .persyaratan-wrapper .card, #pendaftaran .alur-wrapper .card, #pendaftaran .biaya-wrapper .card {
+    padding: 1em 0.5em;
+  }
+}
+#pendaftaran .persyaratan-wrapper {
+  text-align: justify;
+}
+#pendaftaran .persyaratan-wrapper .fas {
+  top: 1em;
+  left: 1em;
+  position: absolute;
+}
+#pendaftaran .alur-wrapper .card {
+  text-align: justify;
+}
 #pendaftaran .alur-wrapper .card .list-group-item .number {
   color: #6B58DB;
-  margin-right: 0.5em;
+  left: 3px;
+  position: absolute;
 }
 #pendaftaran .alur-wrapper .card a {
   color: #6B58DB;
@@ -48,6 +66,9 @@
 #pendaftaran .biaya-wrapper .progress-table-wrap {
   overflow: auto;
   border-radius: 0.6em;
+}
+#pendaftaran .biaya-wrapper .progress-table-wrap .table-row .percentage {
+  width: 80%;
 }
 
 /*# sourceMappingURL=pendaftaran.css.map */
