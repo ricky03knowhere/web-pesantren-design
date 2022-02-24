@@ -42,7 +42,21 @@
 #kurikulum .kegiatan .accordion .progress-table-wrap {
   overflow: auto;
 }
+#kurikulum .kegiatan .accordion .progress-table-wrap .progress-table {
+  min-width: 410px;
+}
+#kurikulum .kegiatan .accordion .progress-table-wrap .serial {
+  width: 5em;
+}
+#kurikulum .kegiatan .accordion .progress-table-wrap .visit {
+  width: 12em;
+}
+#kurikulum .kegiatan .accordion .progress-table-wrap .percentage {
+  width: 20em;
+  padding-right: 0;
+}
 #kurikulum .kegiatan .accordion .unordered-list {
+  padding-top: 15px;
   padding-left: 2em;
   background: #f9f9ff;
 }
@@ -117,6 +131,14 @@
 .kitab-wrapper .owl-theme .owl-nav [class*=owl-]:hover {
   background: transparent;
 }
+@media (max-width: 720px) {
+  .kitab-wrapper .owl-prev {
+    left: 0;
+  }
+  .kitab-wrapper .owl-next {
+    right: 0;
+  }
+}
 .kitab-wrapper .item {
   display: grid;
   justify-content: center !important;
@@ -129,6 +151,7 @@
   width: 95%;
   box-shadow: 0 0 10px 1px rgba(108, 88, 219, 0.7);
   transition: all 0.4s;
+  cursor: pointer;
 }
 .kitab-wrapper .card:hover {
   box-shadow: 3px 3px 23px rgba(108, 88, 219, 0.8);
@@ -157,11 +180,28 @@
   font-size: 0.7rem;
   bottom: 1.5em;
 }
+
+.tooltip {
+  margin: 0.5em;
+  margin-left: 12em;
+  position: absolute;
+}
+.tooltip .arrow::before {
+  margin-left: 1em;
+  border-top-color: #707b8e;
+  border-bottom-color: #707b8e;
+}
+.tooltip .tooltip-inner {
+  box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2);
+  border-radius: 1em;
+  font-size: 0.7rem;
+  background: #707b8e;
+}
 @media (max-width: 720px) {
-  .kitab-wrapper .owl-prev {
+  .tooltip .owl-prev {
     left: 0;
   }
-  .kitab-wrapper .owl-next {
+  .tooltip .owl-next {
     right: 0;
   }
 }

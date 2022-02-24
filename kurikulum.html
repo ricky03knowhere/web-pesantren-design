@@ -470,7 +470,7 @@
     })
 
     // Owl Carousel Tooltips
-    $(".owl-carousel .item .profile-card").tooltip({
+    $(".owl-carousel .item .card").tooltip({
       title: 'Click for detail',
       delay: 200,
       offset: 10,
@@ -483,24 +483,24 @@
 
     // Kegiatan
     let kegiatan1 = [
-      ['03:30-04:00', 'Bangun malam'],
-      ['04:00-04:30', 'Persiapan Sholat Subuh'],
-      ['04:30-05:00', 'Solat subuh'],
-      ['05:00-06:00', 'KBM Pesantren Perkelas'],
-      ['06:00-06:30', 'Persiapan Sekolah'],
-      ['07:15-13:15', 'Belajar Sekolah'],
-      ['13:30-15:00', ' Istirahat '],
-      ['15:00-15:30', 'Solat Ashar'],
-      ['16:00-17:00', 'KM Pesantren Perkelas'],
-      ['17:00-17:30', 'Istirahat'],
-      ['17:30-18:00', 'Tadarus Al Qur\'an'],
-      ['18:00-18:15', 'Shalat Magrib'],
-      ['18:15-19:00', 'KBM Pesantren Perkelas'],
-      ['19:00-19:30', 'Solat Isya '],
-      ['19:30-19:45', 'Istirahat'],
-      ['19.45-21:30', 'Belajar Pesantren'],
-      ['21:30-22:00', 'KBM Pesantren Perkelas'],
-      ['22:00-03:30', 'Istirahat']
+      ['03:30 ~ 04:00', 'Bangun malam'],
+      ['04:00 ~ 04:30', 'Persiapan Sholat Subuh'],
+      ['04:30 ~ 05:00', 'Solat subuh'],
+      ['05:00 ~ 06:00', 'KBM Pesantren Perkelas'],
+      ['06:00 ~ 06:30', 'Persiapan Sekolah'],
+      ['07:15 ~ 13:15', 'Belajar Sekolah'],
+      ['13:30 ~ 15:00', ' Istirahat '],
+      ['15:00 ~ 15:30', 'Solat Ashar'],
+      ['16:00 ~ 17:00', 'KM Pesantren Perkelas'],
+      ['17:00 ~ 17:30', 'Istirahat'],
+      ['17:30 ~ 18:00', 'Tadarus Al Qur\'an'],
+      ['18:00 ~ 18:15', 'Shalat Magrib'],
+      ['18:15 ~ 19:00', 'KBM Pesantren Perkelas'],
+      ['19:00 ~ 19:30', 'Solat Isya '],
+      ['19:30 ~ 19:45', 'Istirahat'],
+      ['19.45 ~ 21:30', 'Belajar Pesantren'],
+      ['21:30 ~ 22:00', 'KBM Pesantren Perkelas'],
+      ['22:00 ~ 03:30', 'Istirahat']
     ]
 
     let kegiatan2 = [
@@ -535,19 +535,19 @@
       )
     })
 
-    // Kegiatan Mingguan
-    $.each(kegiatan2, (i, data) => {
-      $('.mingguan .unordered-list').append(
-        `<li>${data}</li>`
-      )
-    })
+    // Kegiatan Function
+    function fillKegiatan(variable, time) {
+      $.each(variable, (i, data) => {
+        $('.' + time + ' .unordered-list').append(
+          `<li>${data}</li>`
+        )
+      })
+    }
 
+    // Kegiatan Mingguan
+    fillKegiatan(kegiatan2, 'mingguan')
     // Kegiatan Tahunan
-    $.each(kegiatan3, (i, data) => {
-      $('.tahunan .unordered-list').append(
-        `<li>${data}</li>`
-      )
-    })
+    fillKegiatan(kegiatan3, 'tahunan')
 
     // Ekstrakulikuler
     $.each(ekstrakulikuler, (i, data) => {

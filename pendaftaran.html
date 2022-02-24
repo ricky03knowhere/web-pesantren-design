@@ -154,11 +154,6 @@
             <h3 class="sub-title">Persyaratan</h3>
             <div class="card">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fas fa-check-square mr-3"></i>Lorem ipsum dolor sit amet consectetur adipisicing Cras justo odio</li>
-                <li class="list-group-item"><i class="fas fa-check-square mr-3"></i>Lorem ipsum dolor sit amet consectetur adipisicing Dapibus ac facilisis in</li>
-                <li class="list-group-item"><i class="fas fa-check-square mr-3"></i>Lorem ipsum dolor sit amet consectetur adipisicing Morbi leo risus</li>
-                <li class="list-group-item"><i class="fas fa-check-square mr-3"></i>Lorem ipsum dolor sit amet consectetur adipisicing Porta ac consectetur ac</li>
-                <li class="list-group-item"><i class="fas fa-check-square mr-3"></i>Lorem ipsum dolor sit amet consectetur adipisicing Vestibulum at eros</li>
               </ul>
             </div>
           </div>
@@ -171,12 +166,16 @@
             <h3 class="sub-title">Alur Pendaftaran</h3>
             <div class="card">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span class="number">01) </span>Cras Lorem, ipsum dolor sit amet consectetur adipisicing.justo odio</li>
+                <li class="list-group-item"><span class="number">01) </span>Cras Lorem, ipsum dolor sit amet consectetur
+                  adipisicing.justo odio</li>
                 <li class="list-group-item"><span class="number">02) </span>Dapibus ac facilisis in <a href="#">Lorem
                     ipsum dolor sit amet consectetur.</a>Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-                <li class="list-group-item"><span class="number">03) </span>Morbi leo risusLorem, ipsum dolor sit amet consectetur adipisicing.</li>
-                <li class="list-group-item"><span class="number">04) </span>Porta ac consectetur acLorem, ipsum dolor sit amet consectetur adipisicing.</li>
-                <li class="list-group-item"><span class="number">05) </span>Vestibulum at erosLorem, ipsum dolor sit amet consectetur adipisicing.</li>
+                <li class="list-group-item"><span class="number">03) </span>Morbi leo risusLorem, ipsum dolor sit amet
+                  consectetur adipisicing.</li>
+                <li class="list-group-item"><span class="number">04) </span>Porta ac consectetur acLorem, ipsum dolor
+                  sit amet consectetur adipisicing.</li>
+                <li class="list-group-item"><span class="number">05) </span>Vestibulum at erosLorem, ipsum dolor sit
+                  amet consectetur adipisicing.</li>
               </ul>
             </div>
           </div>
@@ -189,7 +188,7 @@
             <h3 class="sub-title">Biaya Pendaftaran</h3>
             <h4><i class="fas fa-angle-double-right mr-2"></i>Santri Putra</h4>
 
-            <div class="card">
+            <div class="card putra">
               <div class="progress-table-wrap">
                 <div class="progress-table">
                   <div class="table-head">
@@ -197,61 +196,20 @@
                     <div class="percentage">Rincian</div>
                     <div class="visit">Biaya</div>
                   </div>
-                  <div class="table-row">
-                    <div class="serial">01</div>
-                    <div class="percentage">
-                      Lorem ipsum dolor sit amet.
-                    </div>
-                    <div class="visit">Rp. 120.000</div>
-                  </div>
-                  <div class="table-row">
-                    <div class="serial">02</div>
-                    <div class="percentage">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas!
-                    </div>
-                    <div class="visit">Rp. 120.000</div>
-                  </div>
-                  <div class="table-head">
-                    <div class="serial"></div>
-                    <div class="percentage">
-                      total
-                    </div>
-                    <div class="visit">Rp. 240.000</div>
-                  </div>
+
                 </div>
               </div>
             </div>
 
             <h4><i class="fas fa-angle-double-right mr-2"></i>Santri Putri</h4>
 
-            <div class="card">
+            <div class="card putri">
               <div class="progress-table-wrap">
                 <div class="progress-table">
                   <div class="table-head">
                     <div class="serial">#</div>
                     <div class="percentage">Rincian</div>
                     <div class="visit">Biaya</div>
-                  </div>
-                  <div class="table-row">
-                    <div class="serial">01</div>
-                    <div class="percentage">
-                      Lorem ipsum dolor sit amet.
-                    </div>
-                    <div class="visit">Rp. 120.000</div>
-                  </div>
-                  <div class="table-row">
-                    <div class="serial">02</div>
-                    <div class="percentage">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas!
-                    </div>
-                    <div class="visit">Rp. 120.000</div>
-                  </div>
-                  <div class="table-head">
-                    <div class="serial"></div>
-                    <div class="percentage">
-                      total
-                    </div>
-                    <div class="visit">Rp. 240.000</div>
                   </div>
                 </div>
               </div>
@@ -384,7 +342,70 @@
     let year = new Date().getFullYear()
     $('#footer .year').html(year)
 
-    // $('.modal').modal('show')
+
+    // Persyaratan
+    let persyaratan = [
+      'Foto Copy KTP, KK & Akte Kelahiran', 'Pas Photo 3 x 4 (3)', 'Mengisi Formulir', 'Mengikuti Tes',
+      'Siap Mentaati Peraturan', 'Membawa Koko Putih'
+    ]
+
+    // Biaya
+    let biayaPutra = [
+      ['Administrasi', 200000],
+      ['Syahriyah', 50000],
+      ['Kitab', 200000],
+      ['Jas Almamater', 250000],
+      ['Uang Kesehatan', 50000],
+      ['Uang Makan', 400000],
+    ]
+
+    let biayaPutri = [
+      ['Administrasi', 200000],
+      ['Syahriyah', 50000],
+      ['Kitab', 200000],
+      ['Uang Kesehatan', 50000],
+      ['Uang Makan', 400000],
+    ]
+
+
+    // Persyaratan
+    $.each(persyaratan, (i, data) => {
+      $('.persyaratan-wrapper .list-group').append(
+        ` <li class="list-group-item"><i class="fas fa-check-square mr-3"></i>${data}</li>`
+      )
+    })
+
+    // Biaya Function
+    function fillTable(variable, gender) {
+      let total = 0
+      $.each(variable, (i, data) => {
+        $('.biaya-wrapper .' + gender + ' .progress-table').append(
+          `<div class="table-row">
+            <div class="serial">${i+1}</div>
+            <div class="percentage">${data[0]}</div>
+            <div class="visit">
+              ${(data[1]).toLocaleString('id-ID', { style: 'currency', currency: 'IDR'})}
+            </div>
+          </div>`
+        )
+        total += data[1]
+      })
+
+      $('.biaya-wrapper .' + gender + ' .progress-table').append(
+        `<div class="table-head">
+          <div class="serial"></div>
+          <div class="percentage">
+            total
+          </div>
+          <div class="visit">${(total).toLocaleString('id-ID', { style: 'currency', currency: 'IDR'})}</div>
+        </div>`
+      )
+    }
+
+    // Biaya Putra
+    fillTable(biayaPutra, 'putra')
+    // Biaya Putri
+    fillTable(biayaPutri, 'putri')
   </script>
 </body>
 

@@ -67,8 +67,18 @@
   overflow: auto;
   border-radius: 0.6em;
 }
-#pendaftaran .biaya-wrapper .progress-table-wrap .table-row .percentage {
-  width: 80%;
+#pendaftaran .biaya-wrapper .progress-table-wrap .progress-table {
+  min-width: 410px;
+}
+#pendaftaran .biaya-wrapper .progress-table-wrap .serial {
+  width: 5em;
+}
+#pendaftaran .biaya-wrapper .progress-table-wrap .percentage {
+  padding-right: 0;
+  width: 20em;
+}
+#pendaftaran .biaya-wrapper .progress-table-wrap .visit {
+  width: 12em;
 }
 
 /*# sourceMappingURL=pendaftaran.css.map */

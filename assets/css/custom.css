@@ -230,6 +230,7 @@
   border-radius: 100%;
   height: 10em;
   width: 10em;
+  cursor: pointer;
   position: relative;
   margin: auto;
   padding: 0;
@@ -381,7 +382,7 @@
 }
 
 .tooltip {
-  margin: 1em 0 -0.5em;
+  margin: 1.5em 0 -0.5em;
   margin-left: 12em;
   position: absolute;
 }

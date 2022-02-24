@@ -60,7 +60,18 @@ $primary-font: "Nunito"
 
       .progress-table-wrap
         overflow: auto
+        .progress-table
+          min-width: 410px
+        .serial
+          width: 5em
+        .visit
+          width: 12em
+        .percentage
+          width: 20em
+          padding-right: 0
+          
       .unordered-list
+        padding-top: 15px
         padding-left: 2em
         background: #f9f9ff
     .btn
@@ -104,7 +115,6 @@ $primary-font: "Nunito"
   .owl-prev, .owl-next
     position: absolute
     top: 30%
-    // margin: 5px
     span
       font-size: 60px
       color: #787878
@@ -127,6 +137,14 @@ $primary-font: "Nunito"
 
     .owl-nav [class*="owl-"]:hover
       background: transparent
+      
+  // Mobile version
+  @media (max-width: 720px) 
+    .owl-prev
+      left: 0
+    .owl-next
+      right: 0
+
 
   .item
     display: grid
@@ -141,6 +159,7 @@ $primary-font: "Nunito"
     // height: 17.5em
     box-shadow: 0 0 10px 1px rgba(108, 88, 219, 0.7)
     transition: all .4s
+    cursor: pointer
     &:hover
       box-shadow: 3px 3px 23px rgba(108, 88, 219, 0.8) 
 
@@ -169,6 +188,21 @@ $primary-font: "Nunito"
       bottom: 1.5em
 
 
+
+.tooltip
+  margin: 0.5em
+  margin-left: 12em
+  position: absolute
+  .arrow::before
+    margin-left: 1em
+    border-top-color: $secondary-text-color
+    border-bottom-color: $secondary-text-color
+  .tooltip-inner
+    box-shadow: 0 0 10px 2px rgba(108, 88, 219, 0.2) 
+    border-radius: 1em
+    font-size: .7rem
+    background: $secondary-text-color
+  
   // Mobile version
   @media (max-width: 720px)
     .owl-prev

@@ -89,4 +89,54 @@
     $(this).addClass('slicknav_open')
 
   }
+
+    // Biaya Putra
+    let total = 0
+    $.each(biayaPutra, (i, data) => {
+      $('.biaya-wrapper .putra .progress-table').append(
+        `<div class="table-row">
+          <div class="serial">${i+1}</div>
+          <div class="visit">${data[0]}</div>
+          <div class="percentage">
+            ${(data[1]).toLocaleString('id-ID', { style: 'currency', currency: 'IDR'})}
+          </div>
+        </div>`
+      )
+      total += data[1]
+    })
+
+    $('.biaya-wrapper .putra .progress-table').append(
+      `<div class="table-head">
+        <div class="serial"></div>
+        <div class="percentage">
+          total
+        </div>
+        <div class="visit">${(total).toLocaleString('id-ID', { style: 'currency', currency: 'IDR'})}</div>
+      </div>`
+    )
+
+    // Biaya Putri
+    total = 0
+    $.each(biayaPutri, (i, data) => {
+      $('.biaya-wrapper .putri .progress-table').append(
+        `<div class="table-row">
+          <div class="serial">${i+1}</div>
+          <div class="visit">${data[0]}</div>
+          <div class="percentage">
+            ${(data[1]).toLocaleString('id-ID', { style: 'currency', currency: 'IDR'})}
+          </div>
+        </div>`
+      )
+      total += data[1]
+    })
+
+    $('.biaya-wrapper .putri .progress-table').append(
+      `<div class="table-head">
+        <div class="serial"></div>
+        <div class="percentage">
+          total
+        </div>
+        <div class="visit total">${(total).toLocaleString('id-ID', { style: 'currency', currency: 'IDR'})}</div>
+      </div>`
+    )
 </script>
